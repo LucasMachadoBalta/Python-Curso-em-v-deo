@@ -1,0 +1,12 @@
+n = int(input("Digite um número: "))
+print("---"*10)
+opcao = int(input("CONVERTER\n[1] binário\n[2] octal\n[3] hexadecimal\nOpção: ")) 
+
+if opcao==1:
+  print('{} em binário: {}'.format(n, bin(n)[2:]))  
+elif opcao==2:
+  print('{} em octal: {}'.format(n, oct(n)[2:]))
+elif opcao==3:
+  print('{} em hexadecimal: {}'.format(n, hex(n)[2:]))
+else:
+  print("Opção inválida")
