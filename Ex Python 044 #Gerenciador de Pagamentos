@@ -1,0 +1,32 @@
+produto = float(input("Preço produto: R$ "))
+condicao = int(input("[1] à vista dinheiro/cheque (10% desconto)\n[2] à vista cartão (5% desconto)\n[3] até 2x no cartão (preço normal)\n[4] 3x ou mais no cartão (20% de juros)\nOpção: "))
+
+if condicao==3 or condicao==4:
+  parcelas = int(input("Quantas parcelas: "))
+
+print("---"*10)
+
+if condicao==1:
+  desconto = produto - ((produto*10)/100)
+  print("Desconto 10%")
+  print(f"Preço final: R$ {desconto:.2f}")
+
+elif condicao==2:
+  desconto = produto - ((produto*5)/100)
+  print("Desconto 5%")
+  print(f"Preço final: R$ {desconto:.2f}")
+
+elif condicao==3:
+  prestacao = produto/parcelas
+  print(f"{parcelas} Parcelas de R$ {prestacao}")
+  print(f"Preço final: R$ {produto:.2f}")
+
+elif condicao==4:
+  juros = produto + ((produto*20)/100)
+  prestacao = juros/parcelas
+  print("20% juros")
+  print(f"{parcelas} Parcelas de R$ {prestacao:.2f}")
+  print(f"Preço final: R$ {juros:.2f}")
+
+else:
+  print("OPÇÃO INVÁLIDA")
