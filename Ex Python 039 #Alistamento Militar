@@ -1,0 +1,14 @@
+from datetime import date
+atual = date.today().year
+
+nasc = int(input("ANO NASCIMENTO: "))
+idade = atual-nasc
+
+if idade==18:
+  print("ALISTE-SE AGORA")
+
+elif idade>18:
+  print(f"ALISTAMENTO PASSOU HÁ {idade-18} ANOS")
+
+elif idade<18:
+  print(f"ALISTE-SE EM {-(idade-18)} ANOS")
