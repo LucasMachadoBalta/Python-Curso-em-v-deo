@@ -1,0 +1,39 @@
+from random import randint
+pc = randint(0,2)
+itens = ('Pedra', 'Papel', 'Tesoura')
+
+vc = int(input("[0] PEDRA\n[1] PAPEL\n[2] TESOURA\nOPÇÃO: "))
+
+print("---"*10)
+print('PC jogou {}'.format(itens[pc]))
+print('VC jogou {}'.format(itens[vc]))
+
+if pc==0: #pc jogou pedra
+  if vc==0:
+    print("EMPATE")
+  elif vc==1:
+    print("VC VENCE")
+  elif vc==2:
+    print("PC VENCE")
+  else:
+    print("JOGADA INVÁLIDA")
+
+elif pc==1: #pc jogou print
+  if vc==0:
+    print("PC VENCE")
+  elif vc==1:
+    print("EMPATE")
+  elif vc==2:
+    print("VC VENCE")
+  else:
+    print("JOGADA INVÁLIDA")
+
+elif pc==2: #pc jogou tesoura
+  if vc==0:
+    print("VC VENCE")
+  elif vc==1:
+    print("PC VENCE")
+  elif vc==2:
+    print("EMPATE")
+  else:
+    print("JOGADA INVÁLIDA")  
