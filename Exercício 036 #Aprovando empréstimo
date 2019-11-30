@@ -1,0 +1,11 @@
+valorcasa = float(input("Valor casa: R$ ")) 
+salario = float(input("Salário: R$ "))
+anos = int(input("A pagar em quantos anos? "))
+
+prestacao = valorcasa/(anos*12)
+
+if prestacao > (salario*30)/100:
+  print("Empréstimo negado\nValor casa: R$ {:.2f}\nA pagar em {} anos\nPrestação: R$ {:.2f}".format(valorcasa, anos, prestacao))
+  
+else:
+  print("Empréstimo aprovado\nValor casa: R$ {:.2f}\nA pagar em {} anos\nPrestação: R$ {:.2f}".format(valorcasa, anos,prestacao))
