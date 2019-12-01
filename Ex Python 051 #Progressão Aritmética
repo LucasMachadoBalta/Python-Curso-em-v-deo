@@ -1,0 +1,8 @@
+print("10 Termos de uma PA")
+print("---"*7)
+a = int(input("Primeiro termo: "))
+r = int(input("Razão: "))
+z = a+(10-1)*r #fórmula último termo PA
+
+for i in range(a, z+r, r):
+  print(i, end=' ')
