@@ -1,0 +1,16 @@
+tot = 0
+n = 0
+nums = 0
+
+while n != 999:
+  n = int(input("Digite n [999 p/ sair]: "))
+  
+  if n == 999:
+    break
+  
+  else:
+    tot += n
+    nums += 1
+
+print(f"{nums} Digitados")
+print("Total:", tot)
