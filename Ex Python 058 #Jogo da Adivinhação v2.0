@@ -1,0 +1,17 @@
+from random import randint
+pc = randint(1, 11)
+vc = 0
+
+while pc != vc:
+  print("Tente adivinhar meu número")
+  vc = int(input("Palpite: "))
+
+  if pc == vc:
+    print(f"Acertou!\n{pc} = {vc}")
+    break
+  
+  elif pc > vc:
+    print("Mais... Tente de novo")
+
+  elif pc < vc:
+    print("Menos... tente de novo")
