@@ -1,0 +1,10 @@
+sexo=''
+while sexo != "MF":
+  sexo = str(input("Sexo: ")).strip().upper()[0]
+
+  if sexo not in "MF":
+    print("TENTE NOVAMENTE")
+
+  else:
+    print(f"Sexo {sexo} registrado")
+    break
