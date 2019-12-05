@@ -1,0 +1,22 @@
+tot = 0
+flag = 'S'
+media = 0
+soma = 0
+nums = []
+
+while flag=="S":
+  n = int(input("Digite número: "))
+  flag = str(input("Continuar [S/N]? ")).strip().upper()[0]
+
+  tot += 1 
+  soma += n
+  nums.append(n)
+
+media = soma/tot
+
+print("---"*10)
+print(f"Vc digitou {tot} números")
+print("Soma: ", soma)
+print("Média: ", media)
+print("Maior número: ", max(nums))
+print("Menor número: ", min(nums))
