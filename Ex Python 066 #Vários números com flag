@@ -1,0 +1,16 @@
+soma = 0
+n = 0
+quantos = 0
+
+while n != 999:
+  n = int(input("Digite número [999 para sair]: "))
+
+  if n == 999:
+    break
+  
+  else:
+    soma += n
+    quantos += 1
+
+print(f"{quantos} números digitados")
+print(f"Soma: {soma}")
