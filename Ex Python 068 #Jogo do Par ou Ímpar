@@ -1,0 +1,36 @@
+from random import randint
+vitorias = 0
+
+while True:
+  vc = int(input("Número [1-5]: "))
+  n = ' '
+  while n not in 'IP':  
+    n = str(input("Par ou Ímpar?\n[I] ímpar\n[P] par\n")).strip().upper()[0]
+  pc = randint(0, 5)
+
+  soma = pc + vc
+  print("---"*7)
+  
+  if soma%2==0:
+    if n in 'I':
+      print(f"pc = {pc}\nvc = {vc}\nvc pediu ímpar\nsoma = {soma}\nVC PERDEU")
+    
+    else:
+      vitorias += 1
+      print(f"pc = {pc}\nvc = {vc}\nvc pediu par\nsoma = {soma}\nVC GANHOU")
+  
+  else:
+    if n in 'I':
+      vitorias += 1 
+      print(f"pc = {pc}\nvc = {vc}\nvc pediu ímpar\nsoma = {soma}\nVC GANHOU")
+    
+    else:
+      print(f"pc = {pc}\nvc = {vc}\nvc pediu par\nsoma = {soma}\nVC PERDEU")
+
+  flag = str(input("Continuar [S/N?] ")).strip().upper()[0]
+
+  if flag in "N":
+    break
+
+print("SAIU")
+print(f"VC VENCEU {vitorias}x")
