@@ -1,0 +1,13 @@
+while True:
+  n = int(input("Tabuada de: "))
+
+  for i in range(0, 11):
+    print(f"{n} x {i} = {n*i}")
+  print("---"*5)
+
+  flag = str(input("Continuar [S/N]? ")).strip().upper()[0]
+
+  if flag in 'N':
+    break
+
+print("SAIU")
