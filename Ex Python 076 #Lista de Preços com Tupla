@@ -1,0 +1,18 @@
+produtos = []
+
+while True:
+  item = str(input("Item: "))
+  preco = float(input("Preço: "))
+  flag = str(input("Continuar [S/N]? ")).strip().upper()[0]
+
+  produtos.append(item)
+  produtos.append(preco)
+
+  if "N" in flag: 
+    break
+
+for pos in range(0, len(produtos)):
+  if pos%2==0:
+    print(f"{produtos[pos]}: ", end=' ')
+  else:
+    print(f"R$ {produtos[pos]}")
