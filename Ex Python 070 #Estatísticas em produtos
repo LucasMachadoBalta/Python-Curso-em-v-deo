@@ -1,0 +1,29 @@
+total = 0
+itensMaisDeMil = 0
+menor = cont = 0
+
+while True:
+  item = str(input("Item: ")).strip()
+  preco = float(input("Preço: "))
+  flag = str(input("Continuar [S/N]? ")).strip().upper()[0]
+
+  total += preco
+  cont += 1 
+
+  if preco > 1000:
+    itensMaisDeMil += 1
+
+  if cont == 1:
+    menor = preco
+    itembarato = item
+
+  if preco < menor:
+    menor = preco
+    itembarato = item
+
+  if "N" in flag:
+    break
+
+print(f"Total compra: R$ {total:.2f}")
+print(f"{itensMaisDeMil} itens de mais de R$ 1000")
+print(f"Item mais barato: {itembarato} R$ {menor:.2f}")
