@@ -1,0 +1,18 @@
+nums = []
+
+for c in range(0, 4):
+  n = int(input(f"Digite {c+1}º valor: "))
+  nums.append(n)
+
+pares = []
+for c in nums:
+  if c%2==0:
+    pares.append(c)
+
+print("Valores digitados: ", nums)
+print(f"9 aparece {nums.count(9)}x")
+if 3 in nums:
+  print(f"O 1º valor 3 aparece na {nums.index(3)+1}ª posição")
+else:
+  print("Valor 3 não encontrado")
+print(f"Pares digitados: {pares}")
