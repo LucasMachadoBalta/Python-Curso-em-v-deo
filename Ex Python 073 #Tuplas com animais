@@ -1,0 +1,9 @@
+animais = ("panda", "baleia","rinoceronte", "abelha", "gato", "barata", "formiga")
+
+print(f"3 primeiros animais: {animais[0:3]}")
+print(f"2 últimos animais: {animais[-2:]}")
+print(f"animais em ordem alfabética: {sorted(animais)}")
+
+bicho = str(input("Digite bicho: ")).strip()
+
+print(f'Abelha está na {animais.index(bicho)+1} posição de animais ameçados')
