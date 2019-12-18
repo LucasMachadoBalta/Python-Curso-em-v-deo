@@ -6,4 +6,4 @@ print(f"animais em ordem alfabética: {sorted(animais)}")
 
 bicho = str(input("Digite bicho: ")).strip()
 
-print(f'Abelha está na {animais.index(bicho)+1} posição de animais ameçados')
+print(f'{bicho} está na {animais.index(bicho)+1} posição de animais ameçados')
