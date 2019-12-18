@@ -1,0 +1,5 @@
+numeros = ("zero", "um", "dois", "três", "quatro", "cinco")
+
+n = int(input("Digite n [0-5]: "))
+
+print(f"{n} por extenso: {numeros[n]}")
