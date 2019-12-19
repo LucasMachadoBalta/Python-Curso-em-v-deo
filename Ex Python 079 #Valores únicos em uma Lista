@@ -1,0 +1,17 @@
+nums = []
+
+while True:
+  n = int(input("Digite valor: "))
+
+  if n in nums:
+    print("Valor duplicado! Não vou adicionar")
+
+  else:
+    nums.append(n)
+    print("valor adicionado com sucesso")
+  
+  flag = str(input("Continuar [S/N]? ")).strip().upper()[0]
+  if "N" in flag:
+    break
+
+print(f"Valores: {sorted(nums)}")
