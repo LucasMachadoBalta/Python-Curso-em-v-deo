@@ -1,0 +1,20 @@
+nums = []
+maior = menor = 0
+
+for c in range(0, 5):
+  n = int(input("Digite valor: "))
+
+  if c==0 or n > nums[-1]:
+    nums.append(n)
+    print("Adicionado ao final da lista...")
+
+  else:
+    pos=0
+    while pos < len(nums):
+      if n<= nums[pos]:
+        nums.insert(pos, n)
+        print(f"Adicionado na posição {pos} da lista...")
+        break
+      pos += 1
+
+print(f"Valores: {nums}")
