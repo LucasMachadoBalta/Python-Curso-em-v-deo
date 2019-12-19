@@ -1,0 +1,10 @@
+nums = []
+
+for c in range(0, 5):
+  nums.append(int(input(f"Digite valor {c}ª posição: ")))
+
+print("Valores digitados: ", nums)
+print(f"Maior: {max(nums)}", end=' ')
+print(f"nas posições: {nums.index(max(nums))}")
+print(f"Menor: {min(nums)}", end=' ')
+print(f"nas posições: {nums.index(min(nums))}")
