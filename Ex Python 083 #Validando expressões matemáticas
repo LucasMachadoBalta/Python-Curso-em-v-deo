@@ -1,0 +1,17 @@
+expr = str(input("Digite expressão: "))
+pilha = []
+
+for symbol in expr:
+  if symbol=='(':
+    pilha.append('(')
+  elif symbol==')':
+    if len(pilha)>0:
+      pilha.pop()
+    else:
+      pilha.append(')')
+      break
+
+if len(pilha)==0:
+  print("Expressão válida")
+else:
+  print("Expressão inválida!")
