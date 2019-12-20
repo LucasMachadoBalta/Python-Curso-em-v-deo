@@ -1,0 +1,22 @@
+lista = []
+listapares = []
+listaimpares = []
+
+while True:
+  n = int(input("Digite n: "))
+  flag = str(input("Continuar [S/N]? ")).strip().upper()[0]
+
+  lista.append(n)
+  
+  if n%2==0:
+    listapares.append(n)
+  
+  else:
+    listaimpares.append(n)
+
+  if "N" in flag:
+    break
+
+print(f"Lista: {lista}")
+print(f"Lista pares: {listapares}")
+print(f"Lista ímpares: {listaimpares}")
