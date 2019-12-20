@@ -1,0 +1,15 @@
+lista = []
+
+while True:
+  n = int(input("Digite n: "))
+  flag = str(input("Continuar [S/N]? ")).strip().upper()[0]
+
+  lista.append(n)
+
+  if "N" in flag:
+    break
+
+print(f"Você digitou {len(lista)} números")
+lista.sort(reverse=True)
+print(f"Valores em ordem decrescente: {lista}")
+print(f"Valor 5 aparece {lista.count(5)}x")
