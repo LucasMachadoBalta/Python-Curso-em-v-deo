@@ -1,0 +1,12 @@
+ns = [[], []]
+
+for c in range(1, 6):
+  n = int(input(f"N {c}º: "))
+
+  if n%2==0:
+    ns[0].append(n)
+
+  else:
+    ns[1].append(n)
+
+print(f"pares: {sorted(ns[0])}\nímpares: {sorted(ns[1])}")
