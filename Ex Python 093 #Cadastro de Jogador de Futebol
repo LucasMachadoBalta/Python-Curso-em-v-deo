@@ -12,12 +12,10 @@ for k,v in player.items():
   print(f'{k}: {v}')
 print(f'Gols: {gols}')
 
-totalgols=0
-for i in gols:
-  totalgols += i
-print(f'Total de gols: {totalgols}')
+#player['gols'] = gols[:]
+player['Total gols'] = sum(gols)
 
-print(f'O jogador {player["Nome"]} jogou {player["Partidas"]} partidas')
+print(f'O jogador {player["Nome"]} jogou {player["Partidas"]} partidas\nTotal de gols: {player["Total gols"]}')
 
 c=0
 for i in gols:
