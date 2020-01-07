@@ -1,0 +1,25 @@
+player = {}
+gols = []
+
+player['Nome'] = str(input("Nome: "))
+player['Partidas'] = int(input("Partidas jogadas: "))
+
+for i in range(0, player['Partidas']):
+  gols.append(int(input(f"Gols marcados na partida {i+1}: ")))
+
+print("---"*10)
+for k,v in player.items():
+  print(f'{k}: {v}')
+print(f'Gols: {gols}')
+
+totalgols=0
+for i in gols:
+  totalgols += i
+print(f'Total de gols: {totalgols}')
+
+print(f'O jogador {player["Nome"]} jogou {player["Partidas"]} partidas')
+
+c=0
+for i in gols:
+  print(f'{c+1}ª partida: {i} gols')
+  c+=1
