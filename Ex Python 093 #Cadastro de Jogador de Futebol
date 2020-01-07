@@ -17,7 +17,5 @@ player['Total gols'] = sum(gols)
 
 print(f'O jogador {player["Nome"]} jogou {player["Partidas"]} partidas\nTotal de gols: {player["Total gols"]}')
 
-c=0
-for i in gols:
-  print(f'{c+1}ª partida: {i} gols')
-  c+=1
+for i, v in enumerate(gols):
+  print(f'{i+1}ª partida: {v} gols')
