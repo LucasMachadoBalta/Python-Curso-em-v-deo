@@ -1,0 +1,28 @@
+galera = list()
+pessoa = list()
+
+while True:
+  pessoa.append(str(input("Nome: ")))
+  pessoa.append(float(input("Nota 1: ")))
+  pessoa.append(float(input("Nota 2: ")))
+  flag = str(input("Continuar [S/N]? ")).strip().upper()[0]
+
+  galera.append(pessoa[:])
+  pessoa.clear()
+
+  if "N" in flag:
+    break
+
+print('-='*30)
+print(f'{"No.":<4}{"Nome":<10}{"Média":>8}')
+for i, a in enumerate(galera):
+  print(f'{i:<4}{a[0]:<10}{(a[1]+a[2])/2:>8}')
+  
+while True:
+  print('-='*30)
+  x = int(input("Ver notas de qual aluno? "))
+  if x==999:
+    break
+
+  if x <= len(galera)-1:
+    print(f"Notas de {galera[x][0]}: {galera[x][1], galera[x][2]}")  
