@@ -1,0 +1,38 @@
+hito = {}
+hitobito = []
+soma = média = 0
+
+while True:
+  hito['nome'] = str(input("Nome: "))
+  while True:
+    hito['sexo'] = str(input("Sexo: ")).strip().upper()[0]
+    if hito['sexo'] in 'MF':
+      break
+    print("Sexo inválido")
+
+  hito['idade'] = int(input("Idade: "))
+  soma += hito['idade']
+  hitobito.append(hito.copy())
+  
+  while True:
+    flag = str(input("Continuar [S/N]? ")).strip().upper()[0]
+    if flag in 'SN':
+      break
+    print("ERRO! S ou N!")
+
+  if 'N' in flag:
+    break
+
+print(f"Pessoas cadastradas: {len(hitobito)}")
+média = soma/len(hitobito)
+print(f"Média de idade: {média:5.2f}")
+
+print(f"Mulheres: ", end='')
+for p in hitobito:
+  if p['sexo']=='F':
+    print(p['nome'])
+
+print("Pessoas c/ idade acima da média: ", end='')
+for p in hitobito:
+  if p['idade']>=média:
+    print(p['nome'], end=' ')
